@@ -1,0 +1,9 @@
+marquee {
+  white-space: nowrap;
+  -webkit-animation: rightThenLeft 4s linear;
+  width: 2000px;
+
+  & .service-items--block {
+    width: 100%;
+  }
+}

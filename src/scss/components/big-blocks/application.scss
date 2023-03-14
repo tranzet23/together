@@ -1,0 +1,20 @@
+.application {
+  padding-top:68px;
+
+  @include mobile {
+    padding-top: 45px;
+  }
+  & .pay-items-column {
+    margin-bottom: 68px;
+
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+
+  & .icons {
+    @include tablet {
+      margin-bottom: 40px;
+    }
+  }
+}

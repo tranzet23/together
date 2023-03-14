@@ -1,0 +1,95 @@
+.partners {
+  background: #F6FAFE;
+  padding: 68px 0;
+  text-align: center;
+
+  @include mobile {
+    padding: 45px 0;
+  }
+
+  ul.slick-dots {
+    margin-top: 48px;
+  }
+}
+
+.slick-wrapper {
+  width: 100%;
+}
+
+.slide-item {
+
+}
+
+ul.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+
+  li {
+    height: 2px;
+    width: 64px;
+    background: #939393;
+    border-radius: 26px;
+    margin-left: 32px;
+
+    cursor: pointer;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    button {
+      font-size: 0;
+      background: transparent;
+      display: none;
+
+    }
+  }
+
+  li.slick-active {
+    background: #E5876C;
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  margin: -20px 0px 0px 0px;
+  z-index: 10;
+  font-size: 0;
+  width: 32px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.slick-arrow.slick-prev {
+  left: 0;
+  background: url("../img/arrow-orange.svg") 0 0 / 100% no-repeat;
+  width: 17px;
+  transform: rotate(180deg);
+
+}
+
+.slick-arrow.slick-next {
+  right: 0;
+  width: 17px;
+  background: url("../img/arrow-orange.svg") 0 0 / 100% no-repeat;
+}
+
+.slick-arrow.slick-disabled {
+  opacity: 0.2;
+}
+
+
+.slider-item__wrap {
+  max-height: 72px;
+
+  svg, img {
+    max-width: 272px;
+  }
+
+  img {
+    object-fit: cover;
+  }
+}

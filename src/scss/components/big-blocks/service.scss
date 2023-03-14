@@ -1,0 +1,58 @@
+.service {
+  background: #F6FAFE;
+  padding: 68px 0;
+  overflow: hidden;
+
+  & .container {
+    max-width: 100%;
+  }
+
+  & .title {
+    text-align: center;
+  }
+
+  &-items {
+    display: flex;
+    flex-direction: column;
+    padding: 68px 0;
+    gap: 32px;
+
+    &--block-wrapper {
+      display: grid;
+      width: 100%;
+      grid-template-columns: repeat(5, 2.4fr);
+    }
+
+    &--block {
+      width: 1930px;
+      overflow-x: auto;
+
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    background: #fff;
+    width: 356px;
+
+
+    p {
+      font-weight: 800;
+      font-size: 28px;
+      line-height: 40px;
+
+      margin-left: 12px;
+    }
+  }
+
+  &-sub {
+    font-weight: 600;
+    line-height: 28px;
+    text-align: center;
+    color: #353535;
+
+  }
+}

@@ -1,0 +1,168 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+h1 {
+  margin: 50px 0 10px;
+  text-align: center;
+}
+
+.country {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+}
+.country .select {
+  position: relative;
+  height: 40px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 16px;
+  background: #FFFFFF;
+  border: 1px solid #E5876C;
+  box-shadow: inset 0px 4px 2px rgba(147, 147, 147, 0.1);
+  border-radius: 8px;
+  margin-bottom: 24px;
+  color: #939393;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+#country-drop {
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 40px;
+    color: #353535;
+    padding: 4px 16px;
+    height: 48px;
+    border-bottom: 1px solid #F6F6F6;
+  }
+}
+.flag-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+  max-width: 24px;
+  max-height: 17px;
+}
+.country .select .flagstrap-icon {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+  width: 16px;
+  height: 11px;
+  background-image: url("https://zinee91.dothome.co.kr/codepen/flags.png");
+  background-repeat: no-repeat;
+  background-color: #e3e5e7;
+}
+
+.country .select:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  width: 8px;
+  height: 5px;
+  background: url("../img/select-arrow.svg") no-repeat;
+  transition: all 0.5s ease-in-out;
+}
+.country .select.open:after {
+  transform: rotate(180deg);
+  transition: all 0.5s ease-in-out;
+}
+.country .dropdown {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 100%;
+  height: 225px;
+  border: 1px solid #cfcfcf;
+  border-top: 1px solid #a6a6a6;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  overflow-y: scroll;
+  z-index: 1;
+}
+.country .dropdown .flagstrap-icon {
+  box-sizing: border-box;
+  display: inline-block;
+  margin-right: 10px;
+  width: 16px;
+  height: 11px;
+  background-image: url("https://zinee91.dothome.co.kr/codepen/flags.png");
+  background-repeat: no-repeat;
+  background-color: #e3e5e7;
+}
+
+.country .dropdown .flagstrap-icon {
+  vertical-align: middle;
+}
+.country .dropdown li {
+  padding: 0 20px;
+  line-height: 34px;
+  font-size: 13px;
+  font-weight: 400;
+  color: #828282;
+  cursor: pointer;
+}
+.country .dropdown li:first-child {
+  margin-top: 12px;
+}
+.country .dropdown li:last-child {
+  margin-bottom: 12px;
+}
+.country .dropdown li:hover {
+  background: #dedede;
+  color: #454545;
+}
+.country .dropdown li.open {
+  display: block;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.country-selected {
+  font-weight: 800 !important;
+  font-size: 14px!important;
+  line-height: 40px!important;
+  color: #353535!important;
+}

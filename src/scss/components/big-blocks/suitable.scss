@@ -1,0 +1,32 @@
+.suitable {
+  padding: 68px 0 128px 0;
+  background: #F6FAFE;
+
+  @include mobile {
+    padding: 45px 0 70px 0;
+  }
+  & .block-flex {
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      row-gap: 30px;
+    }
+  }
+
+  &-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 480px;
+
+    p{
+      text-align: center;
+    }
+
+    a {
+      margin-top: 24px;
+    }
+  }
+}

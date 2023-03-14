@@ -1,0 +1,135 @@
+.blog {
+  padding: 128px 0;
+
+  @include mobile {
+    padding: 45px 0;
+  }
+
+  &-items {
+    display: grid;
+    grid-template-columns: repeat(3,4fr);
+    grid-column-gap: 32px;
+    grid-row-gap: 32px;
+
+    @include  media-max(1250) {
+      grid-template-columns: repeat(2,6fr);
+      grid-column-gap: 24px;
+      grid-row-gap: 24px;
+    }
+    @include mobile {
+      grid-column-gap: 16px;
+      grid-row-gap: 16px;
+    }
+
+    @include media-max(600) {
+      grid-template-columns: repeat(1,12fr);
+    }
+  }
+  &-item__img {
+    max-height: 171px;
+    width:100%;
+    overflow: hidden;
+    height: 100%;
+
+    @include media-max(1250) {
+      max-height: 250px;
+    }
+
+    @include media-max(1100) {
+      max-height: 200px;
+      height: auto;
+    }
+
+    img {
+      width: 100%;
+      background-size: cover;
+      object-fit: cover;
+    }
+  }
+  &-item {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 29px rgba(147, 147, 147, 0.1);
+    border-radius: 12px;
+
+    &-text {
+      padding: 32px 42px 16px 42px;
+
+      @include mobile {
+        padding: 24px 16px 16px 16px;
+      }
+
+      & .title {
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 40px;
+        color: #394149;
+        height: 80px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include mobile {
+          font-size: 20px;
+          line-height: 32px;
+          height: 60px;
+        }
+      }
+
+      & .text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        color: #353535;
+        height: 170px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        @include mobile {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        @include media-max(600) {
+          height: 120px;
+        }
+
+      }
+    }
+
+    &-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 42px 42px 42px;
+
+      @include mobile {
+        padding: 24px 16px 16px 16px;
+      }
+
+      @include media-max(600) {
+        flex-direction: column;
+      }
+    }
+    &__user-info {
+      display: flex;
+      align-items: center;
+
+      & .user-name{
+        margin-left: 12px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 28px;
+        color: #939393;
+      }
+    }
+  }
+}
+
+.crt-date {
+  p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #939393;
+  }
+
+}

@@ -1,0 +1,55 @@
+.faq {
+  padding: 128px 0;
+
+  @include mobile {
+    padding: 45px 0;
+  }
+
+  &-top {
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 68px;
+
+    @include tablet {
+      flex-direction: column;
+      margin-bottom: 48px;
+      row-gap: 30px;
+    }
+    & .block {
+      display: flex;
+      flex-direction: column;
+      row-gap: 32px;
+    }
+
+    & .block-info {
+      max-width:680px;
+    }
+  }
+
+  &-sub {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 24px;
+  }
+
+  & .block-img svg {
+    @include mobile {
+      height: 100px;
+    }
+  }
+}
+
+.faq-accordion-wrapper {
+
+  & > p {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  & .accordion {
+    margin-bottom: 68px;
+  }
+}

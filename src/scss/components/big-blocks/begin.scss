@@ -1,0 +1,49 @@
+.begin {
+  background: #F6FAFE;
+  text-align: center;
+
+  &-block {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: 480px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 70px 0;
+  }
+
+
+  button {
+    margin-top: 24px;
+  }
+
+  .decor {
+    position: absolute;
+    width: 56.57px;
+    height: 56.57px;
+
+
+    transform: rotate(-45deg);
+
+    &1 {
+      top: -30px;
+      left: 0;
+      background: #FFECAA;
+    }
+
+    &2 {
+      bottom: -30px;
+      right: 0;
+      background: #E6876C;
+    }
+  }
+}
+
+
+.variant-white {
+  .begin {
+    background-color: #fff;
+  }
+}

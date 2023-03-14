@@ -1,0 +1,108 @@
+.footer {
+  background: #F6FAFE;
+  padding: 68px 0 12px 0;
+
+  &-blocks {
+    display: flex;
+    justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+
+  &_logo {
+    @include mobile {
+      display: flex;
+      justify-content:center;
+    }
+  }
+
+  &-sub {
+    margin-top: 24px;
+    font-weight: 600;
+    color: #939393;
+    text-align: center;
+  }
+
+  &-number {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #E5876C;
+    margin-bottom: 8px;
+  }
+
+  &-mail {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
+    color: #394149;
+  }
+
+  &-links__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 174px;
+    width: 100%;
+    margin-top: 16px;
+  }
+
+  &-block-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include mobile {
+      margin-top: 30px;
+    }
+  }
+
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 300px;
+    width: 100%;
+    margin-top: 48px;
+
+    @include mobile {
+      margin: 48px auto 30px auto;
+    }
+
+    li {
+      width: 50%;
+
+      &:nth-child(5) {
+        width: 100%;
+
+        @include mobile {
+          width: 50%;
+        }
+      }
+
+      &:nth-child(6) {
+        width: 100%;
+        @include mobile {
+          width: 50%;
+        }
+      }
+
+      &:hover a {
+        color: #ec6c4a;
+        transition: all .3s ease-in;
+      }
+    }
+
+    a {
+      line-height: 24px;
+      color: #E5876C;
+    }
+  }
+}

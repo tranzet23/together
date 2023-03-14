@@ -1,0 +1,85 @@
+.answer {
+  text-align: center;
+  padding: 68px 0;
+
+  @include mobile {
+    padding: 45px 0;
+  }
+}
+
+.accordion .accordion-item {
+  margin: 10px 0;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 8px #6e7a7a;
+  margin-bottom: 32px;
+
+  p {
+    text-align: left;
+  }
+
+  .accordion-titel {
+    cursor: pointer;
+    text-align: left;
+    min-height: 66px;
+    padding: 15px 103px;
+    box-shadow: 0px 4px 29px rgba(147, 147, 147, 0.1);
+    border-radius: 12px 12px 0px 0px;
+
+    @include mobile {
+      padding: 15px 20px;
+      min-height: auto;
+    }
+
+    svg {
+
+      @include mobile {
+        width: 12px;
+        height: 7px;
+      }
+    }
+
+    h2 {
+      font-weight: 800;
+      font-size: 24px;
+      line-height: 40px;
+      color: #394149;
+
+      @include mobile {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+      }
+
+      @include media-max(500) {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+  }
+
+  .accordion-contant {
+    padding: 28px 103px;
+    display: none;
+
+    @include mobile {
+      padding: 15px 20px;
+    }
+  }
+
+  .accordion-titel h2 span {
+    float: right;
+  }
+
+  .copy-right {
+    font-size: 22px;
+    text-align: center;
+    margin: 50px 0;
+  }
+
+  & .block {
+    margin-top: 48px;
+  }
+}
+

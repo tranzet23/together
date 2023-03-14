@@ -1,0 +1,23 @@
+.choose {
+  background: #F6FAFE;
+  ul.choose-list {
+    display: flex;
+    margin:16px auto 0 auto;
+    row-gap: 16px;
+    flex-direction: column;
+
+    li {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .lists-wrap {
+    display: flex;
+    max-width: 800px;
+    margin: 0 auto;
+
+    @include media-max(600) {
+      flex-direction: column;
+    }
+  }
+}

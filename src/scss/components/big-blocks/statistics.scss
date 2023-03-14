@@ -1,0 +1,7 @@
+.statistics-container {
+  flex-direction: row-reverse;
+
+  @include tablet {
+    flex-direction: column;
+  }
+}

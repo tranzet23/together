@@ -1,0 +1,73 @@
+.business {
+  padding: 150px 0;
+
+  @include tablet {
+    padding: 120px 0;
+  }
+
+  @include mobile {
+    padding: 45px 0;
+  }
+
+  &-wrap {
+
+    @include tablet {
+      flex-direction: column;
+    }
+
+  }
+
+  &-info {
+    max-width:480px;
+    width: 100%;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    p {
+      @include tablet {
+        text-align: center;
+      }
+    }
+    & .btn-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .flex {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .title {
+    margin-bottom: 16px;
+
+    @include tablet {
+      text-align: center;
+    }
+  }
+
+  .flex-column {
+    margin-top: 16px;
+    & > div {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+
+      button {
+        margin-top: 8px;
+      }
+    }
+  }
+}
+
+.business-img {
+  @include media-max(500) {
+    display: none;
+  }
+}
