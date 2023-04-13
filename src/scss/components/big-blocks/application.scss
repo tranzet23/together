@@ -18,3 +18,16 @@
     }
   }
 }
+.pay-img.application-img.project-trigger {
+  margin-right: 150px;
+
+  @include mobile {
+    margin-right: 230px;
+  }
+}
+
+.application-img img {
+  @include mobile {
+    height: 250px;
+  }
+}

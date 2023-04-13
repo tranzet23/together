@@ -4,11 +4,7 @@
   overflow: hidden;
 
   @include tablet {
-    padding: 155px 0  155px 0;
-  }
-
-  @include tablet {
-    padding: 150px 0  150px 0;
+    padding: 80px 0  155px 0;
   }
 
   & .wrap {
@@ -36,6 +32,12 @@
       a {
         margin-right: 24px;
       }
+
+      & .text {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -44,6 +46,17 @@
 
     @include media-max(1200) {
       max-width: 480px;
+    }
+
+    & .text {
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 130%;
+      }
     }
   }
 
@@ -80,5 +93,11 @@
   @include mobile {
     width: 250px;
     height: auto;
+  }
+}
+
+.about_us .decor {
+  @include mobile{
+    display: none;
   }
 }

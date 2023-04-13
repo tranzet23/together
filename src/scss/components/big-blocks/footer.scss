@@ -13,6 +13,12 @@
     }
   }
 
+  &-links-bottom {
+    @include mobile {
+      margin-top: 24px;
+    }
+  }
+
 
   &_logo {
     @include mobile {
@@ -52,6 +58,11 @@
     max-width: 174px;
     width: 100%;
     margin-top: 16px;
+
+
+    @include mobile {
+      margin-top: 26px;
+    }
   }
 
   &-block-bottom {
@@ -82,16 +93,10 @@
       &:nth-child(5) {
         width: 100%;
 
-        @include mobile {
-          width: 50%;
-        }
       }
 
       &:nth-child(6) {
         width: 100%;
-        @include mobile {
-          width: 50%;
-        }
       }
 
       &:hover a {
@@ -104,5 +109,18 @@
       line-height: 24px;
       color: #E5876C;
     }
+  }
+}
+
+ul.footer-list li {
+  @include mobile {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+.footer-links-top {
+  @include mobile {
+    text-align: center;
   }
 }

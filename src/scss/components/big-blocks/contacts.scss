@@ -6,9 +6,9 @@
   }
 
   & .block.flex-center {
-      @include tablet {
-        flex-direction: column;
-      }
+    @include tablet {
+      flex-direction: column;
+    }
   }
 
   & .flex-center {
@@ -19,6 +19,11 @@
     font-size: 20px;
     line-height: 28px;
     margin-bottom: 12px;
+
+    @include mobile {
+      font-size: 16px;
+      line-height: 140%;
+    }
   }
 
   & a.text:hover {
@@ -44,11 +49,16 @@
   & .block-info {
     p {
       margin-bottom: 12px;
+
+      @include mobile {
+        font-size: 16px;
+        line-height: 140%;
+      }
     }
   }
 
   &-left {
-    display:flex;
+    display: flex;
     flex-direction: column;
     row-gap: 24px;
   }
@@ -56,6 +66,7 @@
   &-social {
     margin-top: 24px;
   }
+
   &-support {
     margin-top: 24px;
   }
@@ -64,7 +75,7 @@
 .contacts-map {
   img, iframe {
     @include media-max(1200) {
-      max-height:500px;
+      max-height: 500px;
     }
     @include media-max(650) {
       max-height: 400px;
@@ -78,7 +89,7 @@
 .contacts-info-wrap {
   @include tablet {
     display: flex;
-    justify-content:space-around;
+    justify-content: space-around;
   }
 
   @include mobile {
@@ -90,7 +101,7 @@
   }
 
   @include mobile {
-    p{
+    p {
       text-align: center;
     }
   }
@@ -109,4 +120,42 @@
     justify-content: center;
     text-align: center;
   }
+}
+
+.contacts-map {
+  cursor: pointer;
+
+  svg {
+    @include media-max(768) {
+      height: 400px;
+    }
+    @include media-max(550) {
+      height: 300px;
+    }
+  }
+
+  & .tab-button.active {
+    fill: #E5876C;
+    transition: all 0.3s ease;
+  }
+}
+
+
+.country-map {
+  &:hover {
+    fill: #E5876C;
+    transition: all .3s ease-in;
+
+    & .map-title {
+      fill: #fff;
+    }
+  }
+}
+
+path.white-text {
+  fill: #fff !important;
+}
+
+.country-name {
+  pointer-events: none;
 }

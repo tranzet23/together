@@ -8,11 +8,12 @@
 }
 
 .accordion .accordion-item {
-  margin: 10px 0;
-  border-radius: 5px;
+  margin: 10px 0 32px 0;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 8px #6e7a7a;
-  margin-bottom: 32px;
+  filter: drop-shadow(0px 4px 29px rgba(147, 147, 147, 0.1));
+  box-shadow: 0px 4px 29px rgba(147, 147, 147, 0.1);
+  background: #fff;
 
   p {
     text-align: left;
@@ -23,8 +24,8 @@
     text-align: left;
     min-height: 66px;
     padding: 15px 103px;
-    box-shadow: 0px 4px 29px rgba(147, 147, 147, 0.1);
     border-radius: 12px 12px 0px 0px;
+
 
     @include mobile {
       padding: 15px 20px;
@@ -83,3 +84,11 @@
   }
 }
 
+.accordion-item.active .accordion-titel span {
+  transition: all 0.3s ease;
+  transform: rotate(180deg);
+}
+
+.accordion-item .accordion-titel span {
+  transition: all 0.3s ease;
+}

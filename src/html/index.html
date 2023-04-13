@@ -6,15 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Together</title>
-    <link rel="stylesheet" href="css/main.css">
-    <script src="https://kit.fontawesome.com/a42e844375.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
+@include("chunk/header.html")
 <main>
 
-    @include("chunk/header.html")
+
     @include("chunk/hero.html")
     @include("chunk/started.html")
     @include("chunk/pay.html")
@@ -22,14 +23,16 @@
     @include("chunk/transfer.html")
     @include("chunk/service.html")
     @include("chunk/business.html")
-    @include("chunk/begin.html")
+    <div class="sec-p0">
+        @include("chunk/begin.html")
+    </div>
     @include("chunk/application.html")
     @include("chunk/partners.html")
     @include("chunk/answer.html")
-    @include("chunk/footer.html")
+
 
 </main>
-
+@include("chunk/footer.html")
 
 </body>
 

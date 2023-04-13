@@ -5,3 +5,83 @@
     flex-direction: column;
   }
 }
+
+.statistics-img {
+  position: relative;
+  @include media-max(1300) {
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  @include tablet {
+    margin-top: 40px;
+  }
+
+  img {
+    @include mobile {
+      height: 340px;
+    }
+  }
+}
+
+.statistics-img .statistics-el {
+  position: absolute;
+  z-index: -1;
+
+  svg {
+    @include media-max(1300) {
+      width: 420px;
+    }
+    @include tablet {
+      width: 450px;
+    }
+    @include mobile {
+      width: 320px;
+    }
+  }
+
+  &1 {
+    left: -120px;
+    top: 190px;
+
+    @include media-max(1300) {
+      left: 0px;
+      top: 160px;
+    }
+
+    @include mobile {
+      left: 70px;
+      top: 60px;
+    }
+  }
+
+  &2 {
+    left: -61px;
+    top: 340px;
+
+    @include media-max(1300) {
+      left: 39px;
+      top: 320px;
+    }
+
+    @include mobile {
+      left: 110px;
+      top: 190px;
+    }
+  }
+
+  &3 {
+    left: -100px;
+    top: 330px;
+
+    @include media-max(1300) {
+      left: 40px;
+      top: 330px;
+    }
+    @include mobile {
+      left: 100px;
+      top: 220px;
+    }
+  }
+}

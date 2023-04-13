@@ -3,6 +3,20 @@ marquee {
   -webkit-animation: rightThenLeft 4s linear;
   width: 2000px;
 
+  @include tablet {
+    width: 1700px;
+    margin-left: -200px;
+  }
+
+  @include mobile {
+    width: 1300px;
+  }
+
+  @include media-max(550) {
+    width: 1000px;
+    margin-left: -300px;
+  }
+
   & .service-items--block {
     width: 100%;
   }

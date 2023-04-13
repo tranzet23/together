@@ -122,6 +122,7 @@
       top: 6px;
       right: 35px;
       font-size: 0;
+      transition: all 0.3s ease;
 
       &:after {
         position: absolute;
@@ -130,6 +131,12 @@
         width: 25px;
         height: 22px;
         z-index:2;
+      }
+
+      &.open:after {
+        background-image: url(../img/eye2.svg);
+        background-repeat: no-repeat;
+        top: 10px;
       }
     }
   }

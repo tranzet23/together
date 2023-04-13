@@ -2,6 +2,8 @@
   padding: 68px 0 128px 0;
   background: #F6FAFE;
 
+
+
   @include mobile {
     padding: 45px 0 70px 0;
   }
@@ -28,5 +30,12 @@
     a {
       margin-top: 24px;
     }
+  }
+}
+.suitable-block {
+  margin-top: 68px;
+
+  @include mobile {
+    margin-top: 45px;
   }
 }

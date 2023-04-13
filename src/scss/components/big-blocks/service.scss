@@ -3,9 +3,6 @@
   padding: 68px 0;
   overflow: hidden;
 
-  & .container {
-    max-width: 100%;
-  }
 
   & .title {
     text-align: center;
@@ -17,34 +14,68 @@
     padding: 68px 0;
     gap: 32px;
 
+    @include mobile {
+      gap: 16px;
+      padding: 45px 0;
+    }
+
     &--block-wrapper {
       display: grid;
       width: 100%;
-      grid-template-columns: repeat(5, 2.4fr);
+      grid-template-columns: repeat(5, 4fr);
+
+      @include mobile {
+
+      }
     }
 
     &--block {
       width: 1930px;
       overflow-x: auto;
-
     }
   }
 
   &-item {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 25px;
     background: #fff;
-    width: 356px;
+    box-shadow: 0px 4px 12px rgba(217, 221, 241, 0.2);
+    border-radius: 8px;
+    line-height: 100%;
+    margin-right: 32px;
+
+    @include mobile {
+      margin-right: 16px;
+    }
 
 
     p {
       font-weight: 800;
       font-size: 28px;
       line-height: 40px;
+      margin-left: 0;
 
-      margin-left: 12px;
+
+      @include media-max(1400) {
+        font-size: 22px;
+        line-height: 32px;
+      }
+
+      @include tablet {
+        font-size: 16px;
+        line-height: 24px;
+        margin-left: 0;
+      }
+
+      @include mobile {
+        font-size: 18px;
+        line-height: 20px;
+        margin-left: 0;
+        font-weight: 500;
+      }
     }
   }
 
@@ -55,4 +86,135 @@
     color: #353535;
 
   }
+}
+
+
+.cb-tagreel {
+  position: relative;
+}
+
+.cb-tagreel-content {
+  padding: 200px 0;
+}
+
+.cb-tagreel-items {
+  overflow: hidden;
+  cursor: default;
+  margin-bottom: 20px;
+}
+
+.cb-tagreel-row {
+  display: flex;
+  position: relative;
+  text-align: center;
+  white-space: nowrap;
+  width: 100vw;
+}
+
+
+.cb-tagreel-item span {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+
+.infinite-block {
+  display: flex;
+  animation: nudge 10s linear infinite;
+}
+.infinite-block.left {
+  display: flex;
+  animation: scrollText 10s infinite linear;
+}
+
+
+@keyframes nudge{
+  0% {
+    transform: translatex(-100%);
+  }
+  100% {
+    transform: translatex(100%);
+  }
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.marquee {
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  position: absolute;
+}
+
+.marquee  {
+  display: flex;
+  padding-left: 100%;
+  animation: marquee 5s linear infinite;
+
+@include media-max(1300) {
+  width: 2400px;
+}
+}
+
+.marquee2  {
+  animation-delay: 2.5s;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+.wrap-infinite {
+  height: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.infinite-block-wrap {
+  margin-top: 70px;
+  position: relative !important;
+  overflow: hidden !important;
+
+  @include mobile {
+    margin-top: 45px;
+  }
+}
+
+
+.slick-slide {
+  padding: 20px 0;
+  text-align: center;
+}
+
+
+.service-sub {
+  margin-top: 68px;
+
+  @include mobile {
+    margin-top: 45px;
+  }
+}
+
+.slick-carousel-left, .slick-carousel {
+  pointer-events: none;
+}
+
+
+.slick-carousel-left .service-item {
+  flex-direction: row-reverse;
 }

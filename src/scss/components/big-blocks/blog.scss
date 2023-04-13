@@ -7,12 +7,12 @@
 
   &-items {
     display: grid;
-    grid-template-columns: repeat(3,4fr);
+    grid-template-columns: repeat(3, 4fr);
     grid-column-gap: 32px;
     grid-row-gap: 32px;
 
-    @include  media-max(1250) {
-      grid-template-columns: repeat(2,6fr);
+    @include media-max(1250) {
+      grid-template-columns: repeat(2, 6fr);
       grid-column-gap: 24px;
       grid-row-gap: 24px;
     }
@@ -22,12 +22,13 @@
     }
 
     @include media-max(600) {
-      grid-template-columns: repeat(1,12fr);
+      grid-template-columns: repeat(1, 12fr);
     }
   }
+
   &-item__img {
     max-height: 171px;
-    width:100%;
+    width: 100%;
     overflow: hidden;
     height: 100%;
 
@@ -46,6 +47,7 @@
       object-fit: cover;
     }
   }
+
   &-item {
     background: #FFFFFF;
     box-shadow: 0px 4px 29px rgba(147, 147, 147, 0.1);
@@ -109,11 +111,12 @@
         flex-direction: column;
       }
     }
+
     &__user-info {
       display: flex;
       align-items: center;
 
-      & .user-name{
+      & .user-name {
         margin-left: 12px;
         font-weight: 400;
         font-size: 16px;
@@ -125,11 +128,72 @@
 }
 
 .crt-date {
-  p{
+  p {
     font-weight: 400;
     font-size: 16px;
     line-height: 28px;
     color: #939393;
   }
 
+}
+
+.blog-top-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 70px;
+
+  @include tablet {
+    align-items: normal;
+  }
+  @include media-max(700) {
+    flex-direction: column;
+  }
+
+  & .label-search__wrap {
+    display: flex;
+    align-items: center;
+    max-width: 340px;
+    width: 100%;
+
+    label {
+      width: 100%;
+      margin-bottom: 0;
+    }
+
+
+  }
+}
+
+.blog-filter {
+  display: flex;
+  align-items: center;
+  column-gap: 32px;
+  width: 60%;
+  justify-content: flex-end;
+
+
+  @include media-max(1250) {
+    width: 70%;
+  }
+
+  @include tablet {
+    flex-direction: column;
+    row-gap: 20px;
+    align-items: flex-end;
+    width: max-content;
+  }
+}
+
+.search-label {
+  position: relative;
+
+  button {
+    position: absolute;
+    background: transparent;
+    z-index:2;
+    cursor: pointer;
+    top: 8px;
+    right: 18px;
+  }
 }
