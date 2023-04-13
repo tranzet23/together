@@ -1,0 +1,47 @@
+.content-hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+[data-name], [data-tab] {
+  cursor: pointer;
+}
+
+.buttonWrapper {
+  display: flex;
+  width: max-content;
+  border-radius: 8px;
+  background: #F6FAFE;
+}
+
+
+.tabs-wrapper .content {
+  display: none;
+}
+
+.content.active {
+  display: block;
+}
+
+.tab-button {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  color: #353535;
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #F6FAFE;
+  cursor: pointer;
+
+  &.active {
+    color:#fff;
+    background: #E5876C;
+    border-radius: 15px;
+  }
+}
